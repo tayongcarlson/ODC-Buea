@@ -1,0 +1,162 @@
+:root{
+    --main-color: black;
+    --sec-color: orangered;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+/* navbar */
+.navbar{
+    background-color: var(--main-color);
+    padding: 1.5rem 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.navbar span, .active, .navbar a:hover, footer span{
+    color: var(--sec-color);
+}
+
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar h1{
+    color: ivory;
+}
+
+li{
+    list-style: none;
+    margin-left: 4rem;
+}
+
+a{
+    text-decoration: none;
+    color: ivory;
+}
+
+ul{
+    display: flex;
+
+}
+/* End Of Navbar */
+
+
+/* Begining Of Hero */
+.hero{
+    background-color: var(--sec-color);
+    height: 250px;
+    display: flex;
+    text-align: center;
+}
+.hero h1, .hero p{
+    margin-bottom: 1rem;
+}
+
+.hero h1{
+    font-size: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.hero p{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.hero a{
+    background-color: var(--main-color);
+    padding: 12px 15px;
+    display: inline-block;
+}
+
+.hero a:hover{
+    opacity: 0.8;
+}
+/* End Of Hero  */
+
+
+/* Start Of About */
+.about .container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* column-gap: 20px;   Used to put a gap between columns*/
+}
+
+.about img{
+    width: 100%;
+    height: 60%;
+}
+
+.about{
+    margin-top: 2rem;
+}
+
+.section-title{
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.section-title h1{
+    display: inline-block;
+    padding-bottom: 0.2rem;
+    border-bottom: 3px solid var(--sec-color);
+    font-size: 25px;
+
+}
+
+.about p{
+    line-height: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+/* End Of About */
+
+
+/* Footer */
+footer{
+    background-color: var(--main-color);
+    color: aliceblue;
+    padding: 1rem 0;
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 1rem;
+}
+/* End Of Footer */
+
+/* Responsiveness */
+@media(max-width: 991px) {
+    .navbar .container{
+        display: block;
+        text-align: center;
+    }
+
+    .navbarh1{
+        margin-bottom: 1rem;
+    }
+
+    .hero h1{
+        font-size: 25px;
+    }
+
+    .hero p{
+        font-size: 15px;
+    }
+
+    .hero a{
+        padding: 0.5rem
+    }
+
+    .about .container{
+        display: block;
+    }
+
+}
+/* End Of Responsiveness */
